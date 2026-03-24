@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhaskara</title>
+</head>
+<body>
+    <h1>Calculadora de Bhaskara</h1>
+    <label>A: </label>
+    <input type="number" id="a">
+    <br>
+    <label>B: </label>
+    <input type="number" id="b">
+    <br>
+    <label>C: </label>
+    <input type="number" id="c">
+    <br><br>
+    <input type="button" value="Calcular" onclick="Calcular()">
+    <br><br>
+    <h3 id="resposta">...</h3>
+
+    <script>
+        function Calcular(){
+            let A = parseFloat(document.getElementById("a").value);
+            let B= parseFloat(document.getElementById("b").value);
+            let C = parseFloat(document.getElementById("c").value);
+            
+            if (A == 0 ){
+                document.getElementById("resposta").innerHTML = "Não é uma equação de 2 grau!";
+                return;
+            }
+
+            let delta = ( B * B ) - 4 * A * C;
+
+            if (delta < 0){
+                document.getElementById("resposta").innerHTML = "Delta: " + delta + "<br>" + "Não possui raízes reais.";
+            } else {
+                let x1 = (-B + Math.sqrt(delta)) / (2*A);
+                let x2 = (-B - Math.sqrt(delta)) / (2*A);
+
+                document.getElementById("resposta").innerHTML ="x1 = " + x1 + "<br>" + "x2 = " + x2;
+            }
+        }
+    </script>
+    
+</body>
+</html>
