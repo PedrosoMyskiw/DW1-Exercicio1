@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhaskara</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            text-align: center;
+            width: 300px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        input[type="number"]:focus {
+            border-color: #2575fc;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            background: #2575fc;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background: #1a5edb;
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+
+        button:active {
+            transform: scale(0.98);
+            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+        }
+
+        #resposta {
+            margin-top: 20px;
+            background: #f1f1f1;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            text-align: center;
+            width: 300px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: aparecer 0.8s ease forwards;
+        }
+
+        @keyframes aparecer {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+    <h1>Bhaskara</h1>
+
+    <label>A:</label>
+    <input type="number" id="a">
+
+    <label>B:</label>
+    <input type="number" id="b">
+
+    <label>C:</label>
+    <input type="number" id="c">
+
+    <button onclick="Calcular()">Calcular</button>
+
+    <h3 id="resposta">...</h3>
+</div>
+
+<script>
+function Calcular(){
+    let A = parseFloat(document.getElementById("a").value);
+    let B = parseFloat(document.getElementById("b").value);
+    let C = parseFloat(document.getElementById("c").value);
+
+    let delta = (B * B) - 4 * A * C;
+
+    if (delta < 0){
+        document.getElementById("resposta").innerHTML = "Não possui raízes reais";
+    } else {
+        let x1 = (-B + Math.sqrt(delta)) / (2*A);
+        let x2 = (-B - Math.sqrt(delta)) / (2*A);
+
+        document.getElementById("resposta").innerHTML =
+            "x1 = " + x1 + "<br>" + "x2 = " + x2;
+    }
+}
+</script>
+
+</body>
+</html>
