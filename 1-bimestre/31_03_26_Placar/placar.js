@@ -38,3 +38,14 @@ function verificarVencedor() {
         cards[1].classList.add("vencedor");
     }
 }
+
+function removerPonto(time) {
+    if (time === 'A' && pontosA > 0) {
+        pontosA--;
+        document.getElementById("pontosA").innerText = pontosA;
+    } 
+    else if (time === 'B' && pontosB > 0) {
+        pontosB--;
+        document.getElementById("pontosB").innerText = pontosB;
+    }
+}

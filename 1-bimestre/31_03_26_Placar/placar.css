@@ -77,3 +77,18 @@ button:hover {
     margin: auto;
     display: block;
 }
+
+.menos {
+    background: #ef4444;
+    color: white;
+}
+
+.menos:hover {
+    background: #dc2626;
+}
+
+.card button {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
