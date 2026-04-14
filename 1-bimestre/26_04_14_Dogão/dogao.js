@@ -22,6 +22,6 @@ function calcular() {
   let total = (q1 * 22) + (q2 * 26) + (q3 * 29) + (q4 * 5) + (q5 * 8);
   let tquantidade = q1 + q2 + q3 + q4 + q5;
 
-  document.getElementById("resposta").innerHTML = "Total: R$ " + total.toFixed(2).replace(".", ",") + "<br>Quantidade comprada: " + tquantidade;
+  document.getElementById("resposta").innerHTML = "Total: R$ " + total.toFixed(2).replace(".", ",") + "<br>Quantidade: " + tquantidade;
 
 }
