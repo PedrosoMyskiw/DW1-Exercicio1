@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Estacionamento</title>
+    <link rel="stylesheet" href="Tarifa.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Sistema de Tarifação de Estacionamento</h1>
+</header>
+
+<main>
+<section>
+
+    <label>Entrada:</label>
+    <input type="datetime-local" id="entrada">
+
+    <label>Saída:</label>
+    <input type="datetime-local" id="saida">
+
+    <label>
+        <input type="checkbox" id="carroGrande">
+        Carro grande
+    </label>
+
+    <label>
+        <input type="checkbox" id="clienteFrequente">
+        Cliente frequente
+    </label>
+
+    <button onclick="calcular()">Calcular Tarifa</button>
+
+    <h3 id="resultado">...</h3>
+
+</section>
+</main>
+
+<footer>
+    <p>Sistema de estacionamento</p>
+</footer>
+
+<script src="tarifa.js"></script>
+
+</body>
+</html>
