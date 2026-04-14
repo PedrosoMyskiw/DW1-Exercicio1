@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dogão</title>
+  <link rel="stylesheet" href="dogao.css">
+</head>
+
+<body>
+
+  <h1>Dogão</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Preço (R$)</th>
+        <th>Quantidade</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>Cachorro quente básico</td>
+        <td>22,00</td>
+        <td><input type="number" id="i1" value="0" min="0"></td>
+      </tr>
+
+      <tr>
+        <td>Cachorro quente duplo</td>
+        <td>26,00</td>
+        <td><input type="number" id="i2" value="0" min="0"></td>
+      </tr>
+
+      <tr>
+        <td>X-salada</td>
+        <td>29,00</td>
+        <td><input type="number" id="i3" value="0" min="0"></td>
+      </tr>
+
+      <tr>
+        <td>Refrigerante 350ml</td>
+        <td>5,00</td>
+        <td><input type="number" id="i4" value="0" min="0"></td>
+      </tr>
+
+      <tr>
+        <td>Refrigerante 1L</td>
+        <td>8,00</td>
+        <td><input type="number" id="i5" value="0" min="0"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button onclick="calcular()">Calcular</button>
+
+  <div id="resposta">
+    Total: R$ 0,00 <br>
+    Quantidade: 0
+  </div>
+
+  <script src="dogao.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #f5f3ff, #ffffff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 0;
+}
+
+h1 {
+  color: #5b21b6;
+}
+
+/* TABELA */
+table {
+  width: 100%;
+  max-width: 500px;
+  border-collapse: collapse;
+
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Cabeçalho */
+thead {
+  background: #7c3aed;
+  color: white;
+}
+
+th {
+  padding: 12px;
+  text-align: center;
+}
+
+/* Linhas */
+td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+/* Zebra effect */
+tbody tr:nth-child(even) {
+  background: #f9f9ff;
+}
+
+/* Hover linha */
+tbody tr:hover {
+  background: #ede9fe;
+}
+
+/* Inputs */
+input {
+  width: 60px;
+  padding: 5px;
+  text-align: center;
+
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Botão */
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #7c3aed;
+  color: white;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #5b21b6;
+  transform: translateY(-2px);
+}
+
+/* RESULTADO */
+#resposta {
+  margin-top: 20px;
+  padding: 15px;
+  width: 100%;
+  max-width: 500px;
+
+  background: white;
+  border-radius: 12px;
+
+  text-align: center;
+  font-size: 18px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+body {
+  animation: fadeInPage 0.6s ease;
+}
+
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shakeError {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.erro {
+  animation: shakeError 0.3s;
+  background-color: #ffe5e5;
+  color: #b91c1c;
+}
