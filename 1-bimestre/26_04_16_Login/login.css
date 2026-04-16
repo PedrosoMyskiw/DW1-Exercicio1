@@ -13,14 +13,14 @@ body {
   padding: 30px;
   border-radius: 15px;
   text-align: center;
-  width: 250px;
+  width: 260px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
 input {
   width: 100%;
   padding: 10px;
-  margin: 10px 0;
+  margin: 8px 0;
   border-radius: 8px;
   border: 1px solid #ccc;
 }
@@ -40,6 +40,30 @@ button:hover {
   background: #5b21b6;
 }
 
+.link {
+  margin-top: 10px;
+  color: #7c3aed;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
 #erro {
   color: red;
+  margin-top: 10px;
+}
+
+.erro {
+  animation: shake 0.3s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
 }

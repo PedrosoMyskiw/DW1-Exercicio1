@@ -1,15 +1,30 @@
 function entrar() {
 
-  let user = document.getElementById("usuario").value;
-  let pass = document.getElementById("senha").value;
+  let email = document.getElementById("usuario").value;
+  let senha = document.getElementById("senha").value;
 
   let erro = document.getElementById("erro");
+  let box = document.querySelector(".box");
 
-  if (user === "admin" && pass === "1234") {
+  let userSalvo = localStorage.getItem("email");
+  let senhaSalva = localStorage.getItem("senha");
+
+  if (email === userSalvo && senha === senhaSalva) {
 
     window.location.href = "menu.html";
 
   } else {
-    erro.innerText = "Usuário ou senha incorretos!";
+
+    erro.innerText = "Login inválido!";
+
+    box.classList.add("erro");
+
+    setTimeout(() => {
+      box.classList.remove("erro");
+    }, 300);
   }
+}
+
+function irCadastro() {
+  window.location.href = "cadastro.html";
 }
